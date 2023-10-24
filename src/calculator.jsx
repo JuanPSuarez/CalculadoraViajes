@@ -1,5 +1,3 @@
-import FieldsInput from "./components/fieldInputs"
-
 function calculatePay(tripName, date, commissionPercentage, tripAmount, tollsCount, tollAmount, notes) {
     console.log("Calculating with values:", tripName, date, commissionPercentage, tripAmount, tollsCount, tollAmount, notes);
 
@@ -7,13 +5,15 @@ function calculatePay(tripName, date, commissionPercentage, tripAmount, tollsCou
     
     const commissionAmount = tripAmount * commission;
 
-    const totalPay = tripAmount - commissionAmount + (tollsCount * tollAmount);
+    const tollsPayment = tollsCount * tollAmount;
 
-    console.log("Result: commissionAmount =", commissionAmount, "totalPay =", totalPay);
+    const totalPay = commissionAmount + tollsPayment;
 
+    console.log("Result: commissionAmount =", commissionAmount, "tollsPayment =", tollsPayment, "totalPay =", totalPay);
 
     return {
         commissionAmount,
+        tollsPayment,
         totalPay,
     };
 }

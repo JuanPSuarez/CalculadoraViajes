@@ -4,7 +4,7 @@ function FieldsInput({type, placeholder, subText, active, valor, onChange}) {
         <p>{subText}</p>
         <input 
         type={type} 
-        defaultValue={valor} 
+        value={valor} 
         placeholder={placeholder} 
         disabled={active}
         onChange={onChange}
