@@ -5,7 +5,7 @@ import './calculadora.css';
 export default function Calculadora() {
     const [tripName, setTripName] = useState("");
     const [date, setDate] = useState("");
-    const [commissionPercentage, setCommissionPercentage] = useState(21);
+    const [commissionPercentage, setCommissionPercentage] = useState(20);
     const [tripAmount, setTripAmount] = useState(0);
     const [tollsCount, setTollsCount] = useState(0);
     const [tollAmount, setTollAmount] = useState(0);
@@ -40,7 +40,7 @@ export default function Calculadora() {
     <FieldsInput 
       type="number"
       subText="Porcentaje"
-      placeholder="21%"
+      placeholder="20%"
       valor={commissionPercentage}
       active="disabled"
       onChange={(e) => setCommissionPercentage(e.target.value)}
