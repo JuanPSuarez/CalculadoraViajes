@@ -33,6 +33,7 @@ h3 {
     background-color: rgb(0, 108, 151);
     border-radius: 10px 100px / 120px;
     transition: background-color 0.5s;
+    user-select: none;
 }
 
 h3:hover {
