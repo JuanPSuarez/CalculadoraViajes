@@ -2,6 +2,7 @@ import FieldsInput from "./fieldInputs";
 import { useState } from "react";
 import calculatePay from "../calculator";
 import './calculadora.css';
+
 export default function Calculadora() {
     const [tripName, setTripName] = useState("");
     const [date, setDate] = useState("");
@@ -19,6 +20,7 @@ export default function Calculadora() {
         setCommissionAmount(result.commissionAmount);
         setTotalPay(result.totalPay);
     };
+    console.log(import.meta.env.VITE_APIKEY)
 
     return(
         <div className="calculadora">
@@ -99,5 +101,6 @@ export default function Calculadora() {
   </div>
   <button onClick={calculate}>Calcular</button>
 </div>
+
    )
 }
