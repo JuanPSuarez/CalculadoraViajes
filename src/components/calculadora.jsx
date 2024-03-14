@@ -20,7 +20,6 @@ export default function Calculadora() {
         setCommissionAmount(result.commissionAmount);
         setTotalPay(result.totalPay);
     };
-    console.log(import.meta.env.VITE_APIKEY)
 
     return(
         <div className="calculadora">
